@@ -71,9 +71,6 @@ São três tipos:
 - $atMostk (x_i : x_i \in X)$
 	- No máximo $k$ variáveis setadas.
 
-> For example if a cardinality constraint limits the number of true valued variables of the set $x_1$, $x_2$, $x_3$ to at most two $atMost_2({x_1, x_2, x_3})$, the assignment $(x_1 , x_2 , x_3) = (1, 1, 0)$
-is considered to be feasible, while the assignment $(x_1 , x_2 , x_3) = (1, 1, 1)$ would be considered
-as infeasible.
 
 Por exemplo, se uma restrição de cardinalidade limita a quantidade de variáveis que são setadas para `True`, i.e. $atMost_2({x_1, x_2, x_3})$, então $(x_1 , x_2 , x_3) = (1, 1, 0)$ é viável, e $(x_1 , x_2 , x_3) = (1, 1, 1)$ não é viável.
 
