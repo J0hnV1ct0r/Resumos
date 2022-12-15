@@ -159,83 +159,50 @@ Eles usaram dois _solvers_, que obtiveram resultados num tempo muito bom.
 
 ### 4.2 - Comparison of different cardinality constraint encodings ###
 
-> We selected the best candidates for
-each solver by considering the sums of the results over all instances for each combination
-of cardinality encodings. The encodings which led to the minimum of all those sums were
-then taken to generate the instances for our final experiments. Therefore, the combinations of
-cardinality constraint encodings used for Optiriss were as follows: bit adder encoding for the
-cover requirements constraint, cardinality networks for theworkload requirements constraint,
-and the sequential encoding for the maximum number of shifts constraint. The combinations
-
-of cardinality constraint encodings for WPM3 on the other hand were: The sequential encod-
-ing for the cover requirements constraint as well as the workload requirements constraint, and
-
-the encoding which uses cardinality networks for the maximum number of shifts constraint.
+> Se comparou a eficiencia de vairos solvers para a codificação das restrições cardinais
 
 ### 4.3-Final experiments and comparison of solvers ###
 
-> Comparing our approach with another existing exact method based on integer program-
-ming, which was provided by Curtois and Qu (2014) (last two columns in the table) we can conclude that both maxSAT solvers could not find new unknown optimal results. However
-they could provide optimal solutions for instances 1 and 2. Running the maxSAT solvers for
-4 h resulted in finding solutions for two of the instances which could not be solved by the
-integer programming approach within 1 h on a different environment.
+> Eles chegaram no resultado que os dois maxSAT solvers usados tem otimos resultados, Porem o tempo de resposta do maxSAT ainda é muito demorado para esse problema se comparado com outros tecnicas.
 
-### 4.4- Analyzing the influence of the under-coverage soft-constraint ###
 
-não sei se essa parte é muito util.
 
 ## 5-Conclusion ##
 
-> Our results showed that there is a need to experimentally select an
-efficient combination of cardinality encodings for each solver separately, as the best encoding
-strategy in our experiments varied depending on the used solver. A comparison between the
-two solvers could not point out a clear winner for all of the considered benchmark tests. While
-WPM3 performed better on smaller instances, Optiriss was able to produce better results for
-many of the larger instances.
-Currently an exact approach based on integer programming provides better results than
-maxSAT for most of the considered instances. However, maxSAT could provide optimal
-solutions for two of the instances and obtained solutions for two very large instances within
-4 h, which could not be solved by integer programming within 1 h.
-We think that the main reason why the results currently cannot compete with
-integer programming lies in the intensive use of cardinality constraints that are required to
-model the problem. The high significance of choosing good encoding strategies for cardinality
-constraints that became apparent during our experiments as well as the discovered influence
-of the under-coverage constraint indicate the importance of efficient strategies to deal with
-these types of constraints. We therefore conclude that there is a need for improving the
-performance of maxSAT solvers, especially regarding cardinality constraints.
+
+> o experimento mostrou que para a melhor eficiencia dos solvers usados foi necessario uma delicada escolhas de cardinalidades. Como tambem que a comparação dos dois melhores solver não foi capaz de demonstrar qual solver é melhor para o problema abordado.
+
+> O experimento tambem demostrou que o maxSAT ainda precisa melhorar em muito a eficiencia para encontrar soluções para esse tipo de problema, Pois outras aboragens como integer programming são muito mais eficientes para a solução 
+
 # Perguntas #
 
 ## O que já existia antes do artigo em questão? ##
 
+>  Proposta do problema de horario de funcionarios
+
+> diferentes abordagens para a solução do problema usando outros metodos
+
 ## Qual(is) problema(s) o artigo se propõe a resolver? ##
+
+> Solucionar o problema de encontrar horarios de trabalho que atenda as nessecidades dos funcionarios e os padroes basicos de horario de trabalho
 
 ## Qual(is) método(s) (definições, rotina, algoritmo, protocolo, ferramenta, modelagem) foram desenvolvidos e/ou usados? ##
 
-> In this paper we
-investigate four different encoding types: combinatorial encoding, sequential encoding, bit
+> Nesse artigo foi utilizado: combinatorial encoding, sequential encoding, bit
 adder encoding, and cardinality networks.
 
 
 ## O que foi apontado como novidade com relação ao que já existia? Por exemplo, qual a novidade do novo algoritmo definido no artigo? ##
 
-> – We provide the first maxSAT formulation for the variant of the employee scheduling
-problem introduced by Curtois and Qu (2014). Furthermore, we show how the proposed
-maxSAT formulation can be adapted to model another well known variant from nurse
-rostering.
+> foi a primeira formulação de maxSAT para o problema de escala de funcionarios
 
-> – We experiment with different encodings for cardinality constraints and compare two
-leading solvers from the maxSAT evaluation 2015. Additionally, we experiment with a
-123Ann Oper Res (2019) 275:79–99
-81
-simplification of the problem and provide a comparison with the state of the art solu-
-tions.
 
-> – We provide challenging instances which can be used by the maxSAT community to test
-and improve results of maxSAT solvers.
-
+> comparou a eficiencia dos dois melhores solvers do mercado
 
 
 ## Qual(is) resultado(s) foram obtidos? ##
+
+Que o desempenho dos melhores solver são muito proximos e que os metodos do SAT ainda são lentos se comparados com outros metodos
 
 ## Que partes do conteúdo da disciplina foram utilizados no artigo? ##
 
